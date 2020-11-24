@@ -24,8 +24,9 @@
 ## Sprint Backlog Plan (Sprint 1)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 1.1 | Membuat grid 9x9 | Jane Doe | 
-| 2.2 | Membuat grid 3x3 | John Doe |  
+| 1.1 | Membuat grid 9x9 |  | 
+| 2.2 | Membuat grid 3x3 |  |
+| 3.3 | Membuat grid berisi angka | Fau|
 
 ## Retrospective 
 
