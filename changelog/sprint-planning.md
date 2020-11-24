@@ -2,11 +2,11 @@
 | dd/mm/yyyy
 
 ### Team (Insert your name)
-| NPM           | Name        |
-| ------------- |-------------|
-| 140810xx00xx  | John Doe    |
-| 140810xx00xx  | Jane Doe    |
-| 140810xx00xx  | Lorem Ipsum |
+|  NPM          |             Name           |
+| ------------- | ---------------------------|
+| 140810190011  | Muhammad Rafiq 'Abdillah   |
+| 140810190053  | Aidil Fitra                |
+| 140810190077  | Muhammad Alwan Fauzi       |
 
 ## Sprint Backlog Keseluruhan 
 | ID  | Title/Desc | Asignee | 
@@ -19,6 +19,12 @@
 | --- | ---------- | ------- | 
 | 1.1 | Preparing the x | Jane Doe | 
 | 2.2 | Make the x | John Doe | 
+
+## Optional
+| ID  | Title/Desc | Asignee | 
+| --- | ---------- | ------- | 
+| 1.1 | Preparing the x | Jane Doe | 
+| 2.2 | Make the x | John Doe |
 
 ## Retrospective 
 
