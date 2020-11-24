@@ -4,7 +4,7 @@ This repository is a final project (Java GUI) from Object-Oriented Programming C
 
 [Challenge Guidelines](challenge-guideline.md)
 
-**Please create a description for this project here**
+Game Sudoku adalah game logika berbasis teka teki dengan penempatan nomor dan mengisi kolom yang kosong berukuran 9x9 dengan angka yang belum tertera
 
 ## Credits
 |  NPM          |             Name           |
