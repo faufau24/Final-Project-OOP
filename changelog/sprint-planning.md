@@ -12,13 +12,14 @@
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
 | 1.1 | Membuat grid 9x9 | Jane Doe | 
-| 2.2 | Membuat grid 3x3 | John Doe | 
-| 3.3 | Mendesign papan | John Doe |
-| 4.4 | Menmasking angka | John Doe |
-| 5.5 | Menerapkan Algoritma BackTracking | John Doe |
-| 6.6 | Menmasking angka | John Doe |
-| 7.7 | Membuktikan validasi angka | John Doe |
-| 8.8 | Membuat game | John Doe |
+| 2.2 | Membuat grid 3x3 | John Doe |
+| 3.3 | Membuat grid berisi angka | John Doe |
+| 4.4 | Mendesign papan | John Doe |
+| 5.5 | Menmasking angka | John Doe |
+| 6.6 | Menerapkan Algoritma BackTracking | John Doe |
+| 7.7 | Menmasking angka | John Doe |
+| 8.8 | Membuktikan validasi angka | John Doe |
+| 9.9 | Membuat game | John Doe |
 
 ## Sprint Backlog Plan (Sprint 1)
 | ID  | Title/Desc | Asignee | 
