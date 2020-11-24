@@ -11,14 +11,18 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| Membuat grid 9x9  | n             |
+| Membuat grid 3x3  | n             |
+| Membuat grid berisi angka  | n             |
 
 ## Sprint 1 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Preparing the x | Jane Doe | DONE |
-| 1.2 | Make the x | John Doe | FAILED |
+| 1.1 | Membuat grid 9x9 | Fau | DONE |
+| 1.2 | Membuat grid 3x3 | Fau | DONE |
+| 1.3 | Membuat grid berisi angka | Fau | DONE |
+
 
 ## Retrospective 
 
