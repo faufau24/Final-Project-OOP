@@ -32,4 +32,4 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
 | 2.1 | Mendesign grid | Jane Doe | 
-| 2.2 | Memasukan algoritma | John Doe | 
+| 2.2 | Memasukan algoritma backtraking | John Doe | 
