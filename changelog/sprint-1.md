@@ -19,8 +19,8 @@
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Membuat grid 9x9 | Fau | DONE |
-| 1.2 | Membuat grid 3x3 | Fau | DONE |
+| 1.1 | Membuat grid 9x9 | Rafiq | DONE |
+| 1.2 | Membuat grid 3x3 | Aidil | DONE |
 | 1.3 | Membuat grid berisi angka | Fau | DONE |
 
 
