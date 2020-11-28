@@ -11,9 +11,7 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| Membuat grid 9x9  | n             |
-| Membuat grid 3x3  | n             |
-| Membuat grid berisi angka  | n             |
+| 3  | 3             |
 
 ## Sprint 1 Backlog
 
