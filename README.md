@@ -13,18 +13,19 @@ Game Sudoku adalah game logika berbasis teka teki dengan penempatan nomor dan me
 | 140810190077  | Muhammad Alwan Fauzi       |
 
 ## Change log
-- **[Sprint Planning](changelog/sprint-planning.md) - (11 November 2020)** 
-   -  Membagi tugas kelompok
+- **[Sprint Planning](changelog/sprint-planning.md) - (18 November 2020)** 
+   - Membagi tugas kelompok
    - Mengerjakan Sprint 1
 
-- **[Sprint 1](changelog/sprint-1.md) - (11 November 2020 x 24 November 2020)** 
+- **[Sprint 1](changelog/sprint-1.md) - (18 November 2020 x 24 November 2020)** 
    - Membuat grid 9x9
    - Membuat grid 3x3
    - Membuat grid berisi angka
 
-- **[Sprint 2](changelog/sprint-2.md) - (date from x until x)** 
-   - Short changes 1
-   - Short changes 2
+- **[Sprint 2](changelog/sprint-2.md) - (25 November 2020 x 01 Desember 2020)** 
+   - Memasking angka random
+   - Membuat tingkat kesulitan
+   - Mengecek inputan
    
 - **[Sprint 3](changelog/sprint-3.md) - (date from x until x)** 
    - Short changes 1

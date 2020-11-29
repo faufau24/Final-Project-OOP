@@ -19,9 +19,9 @@
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Membuat grid 9x9 | Rafiq | DONE |
-| 1.2 | Membuat grid 3x3 | Aidil | DONE |
-| 1.3 | Membuat grid berisi angka | Fau | DONE |
+| 1.1 | Membuat grid 9x9 | Rafiq | ON PROGRESS |
+| 1.2 | Membuat grid 3x3 | Aidil | ON PROGRESS |
+| 1.3 | Membuat grid berisi angka | Fau | ON PROGRESS |
 
 
 ## Retrospective 
@@ -31,5 +31,6 @@ Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian t
 ## Next Sprint Backlog (Sprint 2)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 2.1 | Mendesign grid | Jane Doe | 
-| 2.2 | Memasukan algoritma backtraking | John Doe | 
+| 2.1 | Memasking angka random |  |
+| 2.2 | Membuat tingkat kesulitan |  |
+| 2.3 | Mengecek inputan |  |
