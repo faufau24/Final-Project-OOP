@@ -1,5 +1,5 @@
 # Sprint Planning 
-| 11/11/2020
+| 18/11/2020
 
 ### Team (Insert your name)
 |  NPM          |             Name           |
@@ -11,22 +11,28 @@
 ## Sprint Backlog Keseluruhan 
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 1.1 | Membuat grid 9x9 | Jane Doe | 
-| 2.2 | Membuat grid 3x3 | John Doe |
-| 3.3 | Membuat grid berisi angka | John Doe |
-| 4.4 | Mendesign papan | John Doe |
-| 5.5 | Menmasking angka | John Doe |
-| 6.6 | Menerapkan Algoritma BackTracking | John Doe |
-| 7.7 | Menmasking angka | John Doe |
-| 8.8 | Membuktikan validasi angka | John Doe |
-| 9.9 | Membuat game | John Doe |
+| 1.1 | Membuat grid 9x9 | Rafiq | 
+| 1.2 | Membuat grid 3x3 | Aidil |
+| 1.3 | Membuat grid berisi angka | Fau |
+| 2.1 | Memasking angka random |  |
+| 2.2 | Membuat tingkat kesulitan |  |
+| 2.3 | Mengecek inputan |  |
+| 3.1 | Highlight grid |  |
+| 3.2 | Membuat button Reset/Restart |  |
+
+## Optional
+| ID  | Title/Desc | Asignee | 
+| --- | ---------- | ------- | 
+| 3.1 | Menu bar |  | 
+| 3.2 | Timer, Pause, Resume |  |
+| 3.3 | Highscore |  |
 
 ## Sprint Backlog Plan (Sprint 1)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 1.1 | Membuat grid 9x9 |  | 
-| 2.2 | Membuat grid 3x3 |  |
-| 3.3 | Membuat grid berisi angka | Fau|
+| 1.1 | Membuat grid 9x9 | Rafiq | 
+| 1.2 | Membuat grid 3x3 | Aidil |
+| 1.3 | Membuat grid berisi angka | Fau |
 
 ## Retrospective 
 
