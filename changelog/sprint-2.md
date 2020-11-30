@@ -11,17 +11,16 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| Memasking angka random | n |
-| Membuat tingkat kesulitan | n |
-| Mengecek inputan | n |
+| 3 | 0 |
+
 
 ## Sprint 2 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 2.1 | Memasking angka random |  |  |
-| 2.2 | Membuat tingkat kesulitan |  |  |
-| 2.3 | Mengecek inputan |  |  |
+| 2.1 | Memasking angka random | Fau | ON PROGRESS  |
+| 2.2 | Membuat tingkat kesulitan | Rafiq | ON PROGRESS |
+| 2.3 | Mengecek inputan | Aidil | ON PROGRES |
 
 ## Retrospective 
 
