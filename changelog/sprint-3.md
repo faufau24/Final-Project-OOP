@@ -1,5 +1,5 @@
 # Scrum Report (Sprint 3)
-| From dd/mm/yyyy to dd/mm/yyyy
+| From 02/12/2020 to 08/12/2020
 
 ## Team (Insert your name)
 |  NPM          |             Name           |
@@ -11,14 +11,14 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| n             | n             |
+| 2             | n             |
 
 ## Sprint 3 Backlog
 
-| ID  | Title/Desc | Asignee | Status |
-| --- | ---------- | ------- | ------ |
-| 3.1 | Preparing the x | Jane Doe | DONE |
-| 3.2 | Make the x | John Doe | FAILED |
+| ID  | Title/Desc    | Asignee | Status |
+| --- | ----------    | ------- | ------ |
+| 3.1 | Highlight grid|         |  |
+| 3.2 | Membuat button Reset/Restart |  |  |
 
 ## Retrospective 
 
