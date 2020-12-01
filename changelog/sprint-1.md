@@ -11,7 +11,7 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 3  | 3             |
+| 3             | 3             |
 
 ## Sprint 1 Backlog
 
@@ -24,7 +24,7 @@
 
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Target dari sprint planning telah tercapai
 
 ## Next Sprint Backlog (Sprint 2)
 | ID  | Title/Desc | Asignee | 
