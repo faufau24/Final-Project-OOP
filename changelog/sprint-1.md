@@ -11,15 +11,15 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 3  | 0             |
+| 3  | 3             |
 
 ## Sprint 1 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 1.1 | Membuat grid 9x9 | Rafiq | ON PROGRESS |
-| 1.2 | Membuat grid 3x3 | Aidil | ON PROGRESS |
-| 1.3 | Membuat grid berisi angka | Fau | ON PROGRESS |
+| 1.1 | Membuat grid 9x9 | Rafiq | DONE |
+| 1.2 | Membuat grid 3x3 | Aidil | DONE |
+| 1.3 | Membuat grid berisi angka | Fau | DONE |
 
 
 ## Retrospective 
