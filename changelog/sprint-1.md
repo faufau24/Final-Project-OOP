@@ -24,7 +24,7 @@
 
 ## Retrospective 
 
-Target dari sprint planning telah tercapai
+Target dari sprint planning telah tercapai.
 
 ## Next Sprint Backlog (Sprint 2)
 | ID  | Title/Desc | Asignee | 
