@@ -8,7 +8,7 @@ Game Sudoku adalah game logika berbasis teka teki dengan penempatan nomor dan me
 ## Credits
 |  NPM          |             Name           |
 | ------------- | ---------------------------|
-| 140810190011  | Muhammad Rafiq Abdillah    |
+| 140810190011  | Muhammad Rafiq 'Abdillah   |
 | 140810190053  | Aidil Fitra                |
 | 140810190077  | Muhammad Alwan Fauzi       |
 
@@ -32,15 +32,10 @@ Game Sudoku adalah game logika berbasis teka teki dengan penempatan nomor dan me
    - Short changes 2
 
 ## Running The App
-- Membuka aplikasi dari game tersebut
-- Lalu tekan tombol start/play
-- Lalu pilih tingkat kesulitan (easy/normal/hard)
-- Mulai lah game tersebut
-- Isi kotak yang belum diisi angka
-- Pastikan angka yang akan diisi belum ada dikotak
-- Jika sudah semua diisi tekan finish
-- Jika ada yang sama tidak akan selesai
-- Selesai
+- Compile Sudoku.java
+- Use command 'java Sudoku easy' for easy dificulty
+- Use command 'java Sudoku medium' for medium dificulty
+- Use command 'java Sudoku hard' for hard dificulty
 
 
 ## Classes Used
