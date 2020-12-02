@@ -11,7 +11,7 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 2             | n             |
+| 3             | n             |
 
 ## Sprint 3 Backlog
 
@@ -19,6 +19,7 @@
 | --- | ----------    | ------- | ------ |
 | 3.1 | Highlight grid|         |  |
 | 3.2 | Membuat button Reset/Restart |  |  |
+| 3.3 | Melanjutkan cek inputan |  |  |
 
 ## Retrospective 
 
