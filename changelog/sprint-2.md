@@ -11,20 +11,20 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 3 | 0 |
+| 3 | 2 |
 
 
 ## Sprint 2 Backlog
 
 | ID  | Title/Desc | Asignee | Status |
 | --- | ---------- | ------- | ------ |
-| 2.1 | Memasking angka random | Fau | ON PROGRESS  |
-| 2.2 | Membuat tingkat kesulitan | Rafiq | ON PROGRESS |
+| 2.1 | Memasking angka random | Fau | DONE  |
+| 2.2 | Membuat tingkat kesulitan | Rafiq | DONE |
 | 2.3 | Mengecek inputan | Aidil | ON PROGRES |
 
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Masih diskusi mengenai algorithm solved untuk mengecek inputan
 
 ## Next Sprint Backlog (Sprint 3)
 | ID  | Title/Desc | Asignee | 
