@@ -11,7 +11,7 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 3 | 2 |
+| 3 | 3 |
 
 
 ## Sprint 2 Backlog
@@ -20,7 +20,7 @@
 | --- | ---------- | ------- | ------ |
 | 2.1 | Memasking angka random | Fau | DONE  |
 | 2.2 | Membuat tingkat kesulitan | Rafiq | DONE |
-| 2.3 | Mengecek inputan | Aidil | ON PROGRES |
+| 2.3 | Mengecek inputan | Aidil | DONE |
 
 ## Retrospective 
 
@@ -29,5 +29,8 @@ Masih diskusi mengenai algorithm solved untuk mengecek inputan
 ## Next Sprint Backlog (Sprint 3)
 | ID  | Title/Desc | Asignee | 
 | --- | ---------- | ------- | 
-| 3.1 | Highlight grid |  |
-| 3.2 | Membuat button Reset/Restart |  |
+| 3.1 | Highlight grid|         |
+| 3.2 | Melanjutkan cek inputan |  |
+| 3.3 | Mengecek Apakah semua inputan telah terisi |  |
+| 3.4 | Menambahkan Menu Exit |  |
+| 3.5 | Membuat button Reset/Restart |  |
