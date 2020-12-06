@@ -27,9 +27,12 @@ Game Sudoku adalah game logika berbasis teka teki dengan penempatan nomor dan me
    - Membuat tingkat kesulitan
    - Mengecek inputan
    
-- **[Sprint 3](changelog/sprint-3.md) - (date from x until x)** 
-   - Short changes 1
-   - Short changes 2
+- **[Sprint 3](changelog/sprint-3.md) - (02 Desember 2020 x 08 Desember 2020)** 
+   - Highlight grid
+   - Melanjutkan cek inputan
+   - Mengecek Apakah semua inputan telah terisi
+   - Menambahkan Menu Exit
+   - Membuat button Reset/Restart
 
 ## Running The App
 - Compile Sudoku.java
@@ -46,4 +49,4 @@ UML image here
 
 ## Notable Assumption and Design App Details
 
-TO;DO
+![Mockup Aplikasi](https://i.ibb.co/Hz1DTzF/Mocup-PBO-sudoku.jpg)
