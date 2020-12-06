@@ -11,17 +11,20 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 3             | n             |
+| 5             | 4             |
 
 ## Sprint 3 Backlog
 
 | ID  | Title/Desc    | Asignee | Status |
 | --- | ----------    | ------- | ------ |
-| 3.1 | Highlight grid|         |  |
-| 3.2 | Membuat button Reset/Restart |  |  |
-| 3.3 | Melanjutkan cek inputan |  |  |
+| 3.1 | Highlight grid|         | DONE |
+| 3.2 | Melanjutkan cek inputan |  | DONE |
+| 3.3 | Mengecek Apakah semua inputan telah terisi |  | DONE |
+| 3.4 | Menambahkan Menu Exit |  | DONE |
+| 3.5 | Membuat button Reset/Restart |  |   |
 
 ## Retrospective 
 
-Sprint kemarin dianggap terlalu sedikit sehingga diperlukan adanya penyesuaian tugas. Lorem ipsum dolor sit amet
+Dikarenakan ada planning yang masih belum sempurna pada minggu kemarin, jadi pada ID 3.2 kita melakukan
+kodingan lanjutan tentang cek inputan
 
