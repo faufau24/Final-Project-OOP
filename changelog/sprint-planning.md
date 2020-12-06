@@ -17,8 +17,11 @@
 | 2.1 | Memasking angka random |  |
 | 2.2 | Membuat tingkat kesulitan |  |
 | 2.3 | Mengecek inputan |  |
-| 3.1 | Highlight grid |  |
-| 3.2 | Membuat button Reset/Restart |  |
+| 3.1 | Highlight grid|         |
+| 3.2 | Melanjutkan cek inputan |  |
+| 3.3 | Mengecek Apakah semua inputan telah terisi |  |
+| 3.4 | Menambahkan Menu Exit |  |
+| 3.5 | Membuat button Reset/Restart |  |
 
 ## Optional
 | ID  | Title/Desc | Asignee | 
