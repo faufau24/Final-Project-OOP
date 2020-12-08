@@ -11,17 +11,18 @@
 ## Sprint Overview
 | Planned (n)   | Completed (n) |
 | ------------- |-------------- |
-| 5             | 4             |
+|      6        |    6          |
 
 ## Sprint 3 Backlog
 
 | ID  | Title/Desc    | Asignee | Status |
 | --- | ----------    | ------- | ------ |
-| 3.1 | Highlight grid|         | DONE |
-| 3.2 | Melanjutkan cek inputan |  | DONE |
-| 3.3 | Mengecek Apakah semua inputan telah terisi |  | DONE |
-| 3.4 | Menambahkan Menu Exit |  | DONE |
-| 3.5 | Membuat button Reset/Restart |  |   |
+| 3.1 | Highlight grid|   Rafiq      | DONE |
+| 3.2 | Melanjutkan cek inputan | Rafiq | DONE |
+| 3.3 | Mengecek Apakah semua inputan telah terisi | Aidil | DONE |
+| 3.4 | Menambahkan Menu Exit | Aidil | DONE |
+| 3.5 | Membuat button Reset/Restart | Fau | DONE  |
+| 3.6 | Membuat button Tingkat Kesulitan | Fau | DONE  |
 
 ## Retrospective 
 
