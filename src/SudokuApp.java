@@ -16,7 +16,8 @@ public class SudokuApp extends JFrame {
    public static final int CANVAS_HEIGHT = CELL_SIZE * GRID_SIZE;
 
    // aturan untuk board
-   public static final Color OPEN_CELL_BGCOLOR = Color.YELLOW;
+   public static final Color OPEN_CELL_BGCOLOR1 = Color.YELLOW;
+   public static final Color OPEN_CELL_BGCOLOR2 = Color.BLUE;
    // public static final Color OPEN_CELL_TEXT_YES = new Color(0, 255, 0); // RGB
    // public static final Color OPEN_CELL_TEXT_NO = Color.RED;
    public static final Color CLOSED_CELL_BGCOLOR = new Color(240, 240, 240); // RGB
@@ -58,9 +59,52 @@ public class SudokuApp extends JFrame {
       }
    }
 
-   static class restartApp implements ActionListener {
+   static class difficultyapp implements ActionListener {
       public void actionPerformed(ActionEvent e) {
-         // System.exit(0);
+         System.exit(0);
+      }
+   }
+
+   class restartApp implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         dispose();
+         new SudokuApp("EASY", 4);
+      }
+   }
+
+   private class DifficultyMenuListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			switch (e.getActionCommand()) {
+			case "easy":
+				// ketika level easy dipilih, maka difficultyLevelnya 5
+				// panggil method dispose untuk menutup window game sudoku yang sebelumnya
+				dispose();
+				new SudokuApp("EASY", 4);
+				break;
+			case "Medium":
+				// ketika level medium dipilih, maka difficultyLevelnya 7
+				// panggil method dispose untuk menutup window game sudoku yang sebelumnya
+				dispose();
+				new SudokuApp("MEDIUM", 2);
+				break;
+			case "Hard":
+				// ketika level hard dipilih, maka difficultyLevelnya 8
+				// panggil method dispose untuk menutup window game sudoku yang sebelumnya
+				dispose();
+				new SudokuApp("HARD", 1);
+				break;
+			default:
+         dispose();
+         new SudokuApp("EASY", 4);
+         break;
+			}
+		}
+	}
+
+   class aboutus implements ActionListener {
+      public void actionPerformed(ActionEvent e) {
+         JOptionPane.showMessageDialog(null, "tentang Kami");
       }
    }
 
@@ -80,6 +124,20 @@ public class SudokuApp extends JFrame {
 
       JMenuBar menubar = new JMenuBar();
       JMenu file = new JMenu("File");
+      JMenu difficulty = new JMenu("difficulty");
+      JMenuItem easy = new JMenuItem("Easy");
+      easy.addActionListener(new DifficultyMenuListener());
+      difficulty.add(easy);
+      JMenuItem medium = new JMenuItem("Medium");
+      medium.addActionListener(new DifficultyMenuListener());
+      difficulty.add(medium);
+      JMenuItem hard = new JMenuItem("Hard");
+      hard.addActionListener(new DifficultyMenuListener());
+      difficulty.add(hard);
+      JMenu help = new JMenu("help");
+      JMenu aboutus = new JMenu("about us");
+      aboutus.addActionListener(new aboutus());
+
 
       JMenuItem restart = new JMenuItem("Restart");
       restart.addActionListener(new restartApp());
@@ -93,7 +151,12 @@ public class SudokuApp extends JFrame {
       exit.addActionListener(new exitApp());
       file.add(exit);
 
+
+
       menubar.add(file);
+      menubar.add(difficulty);
+      menubar.add(help);
+      menubar.add(aboutus);
       setJMenuBar(menubar);
 
       // Container judul = getContentPane();
@@ -149,15 +212,21 @@ public class SudokuApp extends JFrame {
             tfCells[row][col] = new JTextField();
             cp.add(tfCells[row][col]);
 
+            if(((row>=0 && row<=2)&&(col>=0 && col<=2))||((row>=0 && row<=2)&&(col>=6 && col<=8))||((row>=3 && row<=5)&&(col>=3 && col<=5))||((row>=6 && row<=8)&&(col>=0 && col<=2))||((row>=6 && row<=8)&&(col>=6 && col<=8))){
+					tfCells[row][col].setBackground(OPEN_CELL_BGCOLOR1);
+				}
+				else{
+					tfCells[row][col].setBackground(OPEN_CELL_BGCOLOR2);
+            }
+            
             if (masks[row][col]) {
                tfCells[row][col].setText("");
                tfCells[row][col].setEditable(true);
-               tfCells[row][col].setBackground(OPEN_CELL_BGCOLOR);
                tfCells[row][col].addActionListener(listener);
 
             } else {
                tfCells[row][col].setText(puzzle[row][col] + "");
-               tfCells[row][col].setEditable(true);
+               tfCells[row][col].setEditable(false);
                tfCells[row][col].setBackground(CLOSED_CELL_BGCOLOR);
                tfCells[row][col].setForeground(CLOSED_CELL_TEXT);
             }
@@ -168,6 +237,7 @@ public class SudokuApp extends JFrame {
 
       cp.setPreferredSize(new Dimension(CANVAS_WIDTH, CANVAS_HEIGHT));
       add(cp, BorderLayout.CENTER);
+      
       pack();
    }
 
@@ -235,17 +305,6 @@ public class SudokuApp extends JFrame {
    private void highlightGrid() {
       for (int row = 0; row < GRID_SIZE; ++row) {
          for (int col = 0; col < GRID_SIZE; ++col) {
-            if (masks[0][0] == false && masks[0][1] == false && masks[0][2] == false && masks[1][0] == false
-                  && masks[1][1] == false && masks[1][2] == false && masks[2][0] == false && masks[2][1] == false
-                  && masks[2][2] == false) {
-               for (int row1 = 0; row1 < 3; row1++) {
-                  for (int col1 = 0; col1 < 3; col1++) {
-                     tfCells[row1][col1].setBackground(Color.GRAY);
-                     tfCells[row1][col1].setEditable(false);
-                  }
-               }
-            }
-
             if (masks[0][0] == false && masks[0][1] == false && masks[0][2] == false && masks[0][3] == false
                   && masks[0][4] == false && masks[0][5] == false && masks[0][6] == false && masks[0][7] == false
                   && masks[0][8] == false) {
@@ -256,7 +315,7 @@ public class SudokuApp extends JFrame {
                   }
                }
             }
-
+  
             if (masks[1][0] == false && masks[1][1] == false && masks[1][2] == false && masks[1][3] == false
                   && masks[1][4] == false && masks[1][5] == false && masks[1][6] == false && masks[1][7] == false
                   && masks[1][8] == false) {
@@ -267,7 +326,7 @@ public class SudokuApp extends JFrame {
                   }
                }
             }
-
+  
             if (masks[2][0] == false && masks[2][1] == false && masks[2][2] == false && masks[2][3] == false
                   && masks[2][4] == false && masks[2][5] == false && masks[2][6] == false && masks[2][7] == false
                   && masks[2][8] == false) {
@@ -277,6 +336,256 @@ public class SudokuApp extends JFrame {
                   }
                }
             }
+  
+            if (masks[3][0] == false && masks[3][1] == false && masks[3][2] == false && masks[3][3] == false
+                  && masks[3][4] == false && masks[3][5] == false && masks[3][6] == false && masks[3][7] == false
+                  && masks[3][8] == false) {
+               for (int row1 = 3; row1 < 4; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[4][0] == false && masks[4][1] == false && masks[4][2] == false && masks[4][3] == false
+                  && masks[4][4] == false && masks[4][5] == false && masks[4][6] == false && masks[4][7] == false
+                  && masks[4][8] == false) {
+               for (int row1 = 4; row1 < 5; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[5][0] == false && masks[5][1] == false && masks[5][2] == false && masks[5][3] == false
+                  && masks[5][4] == false && masks[5][5] == false && masks[5][6] == false && masks[5][7] == false
+                  && masks[5][8] == false) {
+               for (int row1 = 5; row1 < 6; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[6][0] == false && masks[6][1] == false && masks[6][2] == false && masks[6][3] == false
+                  && masks[6][4] == false && masks[6][5] == false && masks[6][6] == false && masks[6][7] == false
+                  && masks[6][8] == false) {
+               for (int row1 = 6; row1 < 7; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[7][0] == false && masks[7][1] == false && masks[7][2] == false && masks[7][3] == false
+                  && masks[7][4] == false && masks[7][5] == false && masks[7][6] == false && masks[7][7] == false
+                  && masks[7][8] == false) {
+               for (int row1 = 7; row1 < 8; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[8][0] == false && masks[8][1] == false && masks[8][2] == false && masks[8][3] == false
+                  && masks[8][4] == false && masks[8][5] == false && masks[8][6] == false && masks[8][7] == false
+                  && masks[8][8] == false) {
+               for (int row1 = 8; row1 < 9; row1++) {
+                  for (int col1 = 0; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][0] == false && masks[1][0] == false && masks[2][0] == false && masks[3][0] == false
+                  && masks[4][0] == false && masks[5][0] == false && masks[6][0] == false && masks[7][0] == false
+                  && masks[8][0] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 0; col1 < 1; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][1] == false && masks[1][1] == false && masks[2][1] == false && masks[3][1] == false
+                  && masks[4][1] == false && masks[5][1] == false && masks[6][1] == false && masks[7][1] == false
+                  && masks[8][1] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 1; col1 < 2; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][2] == false && masks[1][2] == false && masks[2][2] == false && masks[3][2] == false
+                  && masks[4][2] == false && masks[5][2] == false && masks[6][2] == false && masks[7][2] == false
+                  && masks[8][2] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 2; col1 < 3; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][3] == false && masks[1][3] == false && masks[2][3] == false && masks[3][3] == false
+                  && masks[4][3] == false && masks[5][3] == false && masks[6][3] == false && masks[7][3] == false
+                  && masks[8][3] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 3; col1 < 4; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][4] == false && masks[1][4] == false && masks[2][4] == false && masks[3][4] == false
+                  && masks[4][4] == false && masks[5][4] == false && masks[6][4] == false && masks[7][4] == false
+                  && masks[8][4] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 4; col1 < 5; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][5] == false && masks[1][5] == false && masks[2][5] == false && masks[3][5] == false
+                  && masks[4][5] == false && masks[5][5] == false && masks[6][5] == false && masks[7][5] == false
+                  && masks[8][5] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 5; col1 < 6; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][6] == false && masks[1][6] == false && masks[2][6] == false && masks[3][6] == false
+                  && masks[4][6] == false && masks[5][6] == false && masks[6][6] == false && masks[7][6] == false
+                  && masks[8][6] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 6; col1 < 7; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][7] == false && masks[1][7] == false && masks[2][7] == false && masks[3][7] == false
+                  && masks[4][7] == false && masks[5][7] == false && masks[6][7] == false && masks[7][7] == false
+                  && masks[8][7] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 7; col1 < 8; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][8] == false && masks[1][8] == false && masks[2][8] == false && masks[3][8] == false
+                  && masks[4][8] == false && masks[5][8] == false && masks[6][8] == false && masks[7][8] == false
+                  && masks[8][8] == false) {
+               for (int row1 = 0; row1 < 9; row1++) {
+                  for (int col1 = 8; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                  }
+               }
+            }
+  
+            if (masks[0][0] == false && masks[0][1] == false && masks[0][2] == false && masks[1][0] == false
+                  && masks[1][1] == false && masks[1][2] == false && masks[2][0] == false && masks[2][1] == false
+                  && masks[2][2] == false) {
+               for (int row1 = 0; row1 < 3; row1++) {
+                  for (int col1 = 0; col1 < 3; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[0][3] == false && masks[0][4] == false && masks[0][5] == false && masks[1][3] == false
+                  && masks[1][4] == false && masks[1][5] == false && masks[2][3] == false && masks[2][4] == false
+                  && masks[2][5] == false) {
+               for (int row1 = 0; row1 < 3; row1++) {
+                  for (int col1 = 3; col1 < 6; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[0][6] == false && masks[0][7] == false && masks[0][8] == false && masks[1][6] == false
+                  && masks[1][7] == false && masks[1][8] == false && masks[2][6] == false && masks[2][7] == false
+                  && masks[2][8] == false) {
+               for (int row1 = 0; row1 < 3; row1++) {
+                  for (int col1 = 6; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[3][0] == false && masks[3][1] == false && masks[3][2] == false && masks[4][0] == false
+                  && masks[4][1] == false && masks[4][2] == false && masks[5][0] == false && masks[5][1] == false
+                  && masks[5][2] == false) {
+               for (int row1 = 3; row1 < 6; row1++) {
+                  for (int col1 = 0; col1 < 3; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[3][3] == false && masks[3][4] == false && masks[3][5] == false && masks[4][3] == false
+                  && masks[4][4] == false && masks[4][5] == false && masks[5][3] == false && masks[5][4] == false
+                  && masks[5][5] == false) {
+               for (int row1 = 3; row1 < 6; row1++) {
+                  for (int col1 = 3; col1 < 6; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[3][6] == false && masks[3][7] == false && masks[3][8] == false && masks[4][6] == false
+                  && masks[4][7] == false && masks[4][8] == false && masks[5][6] == false && masks[5][7] == false
+                  && masks[5][8] == false) {
+               for (int row1 = 3; row1 < 6; row1++) {
+                  for (int col1 = 6; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[6][0] == false && masks[6][1] == false && masks[6][2] == false && masks[7][0] == false
+                  && masks[7][1] == false && masks[7][2] == false && masks[8][0] == false && masks[8][1] == false
+                  && masks[8][2] == false) {
+               for (int row1 = 6; row1 < 9; row1++) {
+                  for (int col1 = 0; col1 < 3; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[6][3] == false && masks[6][4] == false && masks[6][5] == false && masks[7][3] == false
+                  && masks[7][4] == false && masks[7][5] == false && masks[8][3] == false && masks[8][4] == false
+                  && masks[8][5] == false) {
+               for (int row1 = 6; row1 < 9; row1++) {
+                  for (int col1 = 3; col1 < 6; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
+            if (masks[6][6] == false && masks[6][7] == false && masks[6][8] == false && masks[7][6] == false
+                  && masks[7][7] == false && masks[7][8] == false && masks[8][6] == false && masks[8][7] == false
+                  && masks[8][8] == false) {
+               for (int row1 = 6; row1 < 9; row1++) {
+                  for (int col1 = 6; col1 < 9; col1++) {
+                     tfCells[row1][col1].setBackground(Color.GRAY);
+                     tfCells[row1][col1].setEditable(false);
+                  }
+               }
+            }
+  
          }
       }
    }
