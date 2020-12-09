@@ -30,10 +30,16 @@ public class SudokuApp extends JFrame {
    public static final int max = 9;
 
    // puzzle untuk sudoku
-   private int[][] puzzle = { { 8, 5, 9, 7, 6, 1, 4, 2, 3 }, { 5, 3, 4, 6, 7, 8, 9, 1, 2 },
-         { 6, 7, 2, 1, 9, 5, 3, 4, 8 }, { 1, 9, 8, 3, 4, 2, 5, 6, 7 }, { 4, 2, 6, 8, 5, 3, 7, 9, 1 },
-         { 7, 1, 3, 9, 2, 4, 8, 5, 6 }, { 9, 6, 1, 5, 3, 7, 2, 8, 4 }, { 2, 8, 7, 4, 1, 9, 6, 3, 5 },
-         { 3, 4, 5, 2, 8, 6, 1, 7, 9 } };
+   private int[][] puzzle = { 
+      {5, 3, 4, 6, 7, 8, 9, 1, 2},
+      {6, 7, 2, 1, 9, 5, 3, 4, 8},
+      {1, 9, 8, 3, 4, 2, 5, 6, 7},
+      {8, 5, 9, 7, 6, 1, 4, 2, 3},
+      {4, 2, 6, 8, 5, 3, 7, 9, 1},
+      {7, 1, 3, 9, 2, 4, 8, 5, 6},
+      {9, 6, 1, 5, 3, 7, 2, 8, 4},
+      {2, 8, 7, 4, 1, 9, 6, 3, 5},
+      {3, 4, 5, 2, 8, 6, 1, 7, 9} };
    // For testing, open only 2 cells.
 
    JLabel label = new JLabel();
@@ -102,11 +108,11 @@ public class SudokuApp extends JFrame {
 		}
 	}
 
-   class aboutus implements ActionListener {
-      public void actionPerformed(ActionEvent e) {
-         JOptionPane.showMessageDialog(null, "tentang Kami");
-      }
-   }
+   // class aboutus implements ActionListener {
+   //    public void actionPerformed(ActionEvent e) {
+   //       JOptionPane.showMessageDialog(null, "tentang Kami");
+   //    }
+   // }
 
    static class clearApp implements ActionListener {
       public void actionPerformed(ActionEvent e) {
@@ -135,9 +141,15 @@ public class SudokuApp extends JFrame {
       hard.addActionListener(new DifficultyMenuListener());
       difficulty.add(hard);
       JMenu help = new JMenu("help");
-      JMenu aboutus = new JMenu("about us");
-      aboutus.addActionListener(new aboutus());
-
+      JMenu about = new JMenu("about");
+      JMenuItem aboutus = new JMenuItem("about us");
+      aboutus.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+            JOptionPane.showMessageDialog(null, "Tim Kita");
+         }
+      });
+      about.add(aboutus);
 
       JMenuItem restart = new JMenuItem("Restart");
       restart.addActionListener(new restartApp());
@@ -156,7 +168,7 @@ public class SudokuApp extends JFrame {
       menubar.add(file);
       menubar.add(difficulty);
       menubar.add(help);
-      menubar.add(aboutus);
+      menubar.add(about);
       setJMenuBar(menubar);
 
       // Container judul = getContentPane();
@@ -200,11 +212,22 @@ public class SudokuApp extends JFrame {
 
       // NANTI
       // DIUBAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH!
-      for (int i = 1; i <= 9; i++) {
-         for (int j = 1; j <= 9; j++) {
-            puzzle[i - 1][j - 1] = 1 + ((i * 10 / 3) + j) % (9);
-         }
-      }
+      // int[][] tempRow;
+      // for (int i = 0; i < 9; i++) {
+      //    for (int i = 0; i < 9; i++) {
+      //       int rowNum = (rd.nextInt(GRID_SIZE));
+      //       // utk i=0. newRow = 1/9*3 = 0
+      //       // utk i=1. newRow = 2/9*3 = 0
+      //       int newRow = (rowNum/GRID_SIZE) * SUBGRID_SIZE;
+      //       // tukar baris
+      //       // utk i=0. swap baris index 1 dan 0
+      //       // utk i=1. swap baris index 2 dan 0 (yg tdnya baris 1)
+      //       tempRow = puzzle[rowNum];
+      //       puzzle[rowNum] = puzzle[newRow];
+      //       puzzle[newRow] = tempRow;
+      //       if()
+      //    }
+      // }
 
       // Untuk menampilkan grid sudoku
       for (int row = 0; row < GRID_SIZE; ++row) {
